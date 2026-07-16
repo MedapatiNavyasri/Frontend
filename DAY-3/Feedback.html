@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Feedback Form</title>
+    <style>
+        .container{
+            width:400px;
+            margin:50px auto;
+            padding:20px;
+            border:2px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2 align="center">Hospital Feedback Form</h2>
+    <form action="" method="post">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="mobile">Mobile Number</label><br>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required><br><br>
+        <label for="department">Department</label><br>
+        <select id="department" name="department" required>
+            <option value="">-- Select Department --</option>
+            <option value="General Medicine">General Medicine</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Orthopedics">Orthopedics</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Pediatrics">Pediatrics</option>
+            <option value="ENT">ENT</option>
+            <option value="Dermatology">Dermatology</option>
+        </select><br><br>
+        <label>Overall Experience</label><br>
+        <input type="radio" id="excellent" name="experience" value="Excellent">
+        <label for="excellent">Excellent</label>
+        <input type="radio" id="good" name="experience" value="Good">
+        <label for="good">Good</label>
+        <input type="radio" id="average" name="experience" value="Average">
+        <label for="average">Average</label>
+        <input type="radio" id="poor" name="experience" value="Poor">
+        <label for="poor">Poor</label><br><br>
+        <label for="summary">Feedback Summary</label><br>
+        <textarea id="summary" name="summary" rows="5" cols="35" placeholder="Write your feedback here"></textarea><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+    </form>
+    </div>
+</body>
+</html>

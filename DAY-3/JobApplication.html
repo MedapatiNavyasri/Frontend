@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Form</title>
+    <style>
+       .container{
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid black;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Job Application Form</h2>
+            <form action="" method="post">
+                <label for="name">Full Name</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+                <label for="phone">Phone Number</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+                <label for="age">Age</label><br>
+                <input type="number" id="age" name="age" min="18" max="40" required><br><br>
+                <label for="education">Education</label><br>
+                <select id="education" name="education" required>
+                    <option value="">-- Select Qualification --</option>
+                    <option value="10th">10th</option>
+                    <option value="12th">12th</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="M.Tech">M.Tech</option>
+                    <option value="MBA">MBA</option>
+                    <option value="MCA">MCA</option>
+                    <option value="Ph.D">Ph.D</option>
+                </select><br><br>
+                <label for="country">Select Country</label><br>
+                <select id="country" name="country" multiple size="4">
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Japan">Japan</option>
+                </select><br><br>
+                <label for="resume">Upload Resume</label><br>
+                <input type="file" id="resume" name="resume"><br><br>
+                <label for="message">Address</label><br>
+                <textarea id="message" name="message" rows="5" cols="20" placeholder="Write your answer here"></textarea><br><br>
+                <input type="submit" value="Apply">
+                <input type="reset" value="Clear">
+            </form>
+    </div>
+    </body>
+</html>
