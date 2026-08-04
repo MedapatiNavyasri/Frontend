@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local Storage Methods</title>
+</head>
+<body>
+<h2>Student Form</h2>
+<form id="studentForm">
+    Name:
+    <input type="text" id="name" required><br><br>
+    Email:
+    <input type="email" id="email" required><br><br>
+    Course:
+    <input type="text" id="course" required><br><br>
+    <button type="submit">Save</button>
+</form>
+<br>
+<button onclick="getData()">Get Data</button>
+<button onclick="removeData()">Remove Data</button>
+
+<script>
+document.getElementById("studentForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    let student = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        course: document.getElementById("course").value
+    };
+    localStorage.setItem("student", JSON.stringify(student));
+    console.log("Data Stored Successfully!");
+
+    this.reset();
+});
+function getData() {
+    let data = localStorage.getItem("student");
+
+    if (data) {
+        let student = JSON.parse(data);
+        console.log("Stored Data:");
+        console.log(student);
+    } else {
+        console.log("No Data Found!");
+    }
+}
+function removeData() {
+    localStorage.removeItem("student");
+    console.log("Data Removed Successfully!");
+}
+</script>
+</body>
+</html>
